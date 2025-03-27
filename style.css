@@ -1,0 +1,214 @@
+/* Cyberpunk Theme */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #080A0E;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px cyan;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    color: cyan;
+    text-transform: uppercase;
+}
+
+/* Hamburger Menu (For Mobile) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: cyan;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: cyan;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: magenta;
+    text-shadow: 0 0 10px magenta;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: url('https://source.unsplash.com/1600x900/?cyberpunk,neon') no-repeat center/cover;
+    box-shadow: 0 0 20px cyan;
+    margin-top: 70px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    text-shadow: 0 0 10px cyan;
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: magenta;
+}
+
+/* CTA Button */
+.cta-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: none;
+    background: cyan;
+    color: black;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: magenta;
+    box-shadow: 0 0 10px magenta;
+}
+
+/* Feature Section */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 20px;
+    gap: 20px;
+}
+
+.feature-card {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border: 2px solid cyan;
+    text-align: center;
+    transition: 0.3s;
+    width: 250px;
+}
+
+.feature-card:hover {
+    border-color: magenta;
+    box-shadow: 0 0 10px magenta;
+}
+
+/* Team */
+.team .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 20px;
+    gap: 20px;
+}
+
+.team .container .Team-Leader{
+    background: black;
+    padding: 20px;
+    border: 2px solid cyan;
+    text-align: center;
+    width: 250px;
+}
+
+.team .container .Team-Member{
+    background: black;
+    padding: 20px;
+    border: 2px solid cyan;
+    text-align: center;
+    width: 250px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: black;
+    color: cyan;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
